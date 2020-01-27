@@ -8,6 +8,37 @@
     <title>Welcome to Nashville</title>
 </head>
 <body>
+    <h1>Welcome To Nashville</h1>
+    <div id="searchContainer">
+        <h2>Search for stuff to do today</h2>
+        <input type="text" id="search-parks" placeholder="Parks by feature" />
+        <button id="search-btn">Search</button>
+        <div>
+        <input type="text" id="search-art" placeholder="Public art by description" />
+        <button id="search-btn">Search</button>
+        </div>
+        <input type="text" id="search-restaurants" placeholder="Restaurants by ethnicity" />
+        <button id="search-btn">Search</button>
+        <div>
+        <input type="text" id="search-concerts" placeholder="Concerts by genre" />
+        <button id="search-btn">Search</button>
+        </div>
+    </div>
+
+    <article id="parkContainer">
+        <h2>Park Results</h2>
+        <ol id="parkResults">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+
+    </article>
+    <article id="itineraryContainer">
+        <h2>My Itinerary</h2>
+
+    </article>
+
     <script src="scripts/apiManager/api-keys.js"></script>
     <script src="scripts/apiManager/art-api-manager.js"></script>
     <script src="scripts/apiManager/concert-api-manager.js"></script>
