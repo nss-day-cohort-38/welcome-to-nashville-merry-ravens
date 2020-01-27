@@ -1,6 +1,6 @@
 const apiBaseUrl = `https://data.nashville.gov/resource/74d7-b74t.json?`
 
-const searchCriteria =  "Metro"
+const parkSearchCriteria =  "Metro"
 
 //Searches Restaurants 
 const parksApiManager = {
@@ -10,7 +10,7 @@ const parksApiManager = {
   }
 };
 
-const parksSearchResultPromise = parksApiManager.searchRestaurants(searchCriteria);
+const parksSearchResultPromise = parksApiManager.searchParks(searchCriteria);
 
 // parksSearchResultPromise.then(searchResults => {
 //     console.log(searchResults);
