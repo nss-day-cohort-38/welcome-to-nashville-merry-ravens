@@ -1,18 +1,19 @@
 const apiBaseUrl = `https://developers.zomato.com/api/v2.1/search?entity_id=1138&`
 
-const searchCriteria =  "Chinese"
+const searchCriteriaRestaurant =  "Chinese"
 
 
 
 //Searches Restaurants 
-const apiManager = {
-  searchRestaurants(searchCriteria) {
-    const url = apiBaseUrl + `q=${searchCriteria}` + `&apikey=${apiKeys.Zomato}`
+
+const apiManagerRestaurant = {
+  searchRestaurants(searchCriteriaRestaurant) {
+    const url = apiBaseUrl + `q=${searchCriteriaRestaurant}` + `&apikey=${apiKeys.Zomato}`
     return fetch(url).then(resp => resp.json());
   }
 };
 
-const searchResultPromise = apiManager.searchRestaurants(searchCriteria);
+const searchResultPromiseRestaurant = apiManagerRestaurant.searchRestaurants(searchCriteriaRestaurant);
 
 //  searchResultPromise.then(searchResults => {
 // console.log(searchResults);
