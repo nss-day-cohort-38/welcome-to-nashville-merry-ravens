@@ -4,7 +4,7 @@ const searchCriteria =  "Metro"
 
 //Searches Restaurants 
 const parksApiManager = {
-  searchRestaurants(searchCriteria) {
+  searchParks(searchCriteria) {
     const url = apiBaseUrl + `$q=${searchCriteria}`
     return fetch(url).then(resp => resp.json());
   }
