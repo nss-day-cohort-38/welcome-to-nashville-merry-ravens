@@ -63,8 +63,7 @@ const searchParkEventManager = {
                     const searchCriteria = input.value;
                     const searchConcertsResultPromise = apiConcertManager.searchConcerts(searchCriteria);
                     searchConcertsResultPromise.then(searchResults => {
-                        console.log(searchResults) /*this is a place holder to later be passed to DOM manager*/
-                    
+                        concertSearchResultsDomManager.renderSearchResults(searchResults);                    
                 })
             })
         }
