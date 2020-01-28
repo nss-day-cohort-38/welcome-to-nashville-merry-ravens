@@ -20,7 +20,8 @@ const concertSearchResultsDomManager = {
     },
     renderSearchResults(searchResults) {
         const concerts = searchResults._embedded.events
-        console.log(concerts);
+        // Uncomment this to get a log of the fetch result:
+        // console.log(concerts);
         const container = document.querySelector("#resultsContainer");
         container.innerHTML = "<h2>Concert Results</h2>";
         concerts.forEach(concert => {
