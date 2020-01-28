@@ -1,6 +1,6 @@
-const retaurantsApiBaseUrl = `https://developers.zomato.com/api/v2.1/search?entity_id=1138&`
+const restaurantsApiBaseUrl = `https://developers.zomato.com/api/v2.1/search?entity_id=1138&`
 
-const searchCriteriaRestaurant =  "Chinese"
+// const searchCriteriaRestaurant =  "Chinese"
 
 
 
