@@ -35,6 +35,6 @@ const restaurantsResultsDomManager = {
  // TODO: Adjust when Event & DOM Managers are working
 const restaurantSearchResultPromise = apiManagerRestaurant.searchRestaurants(searchResults);
 restaurantSearchResultPromise.then(searchResults => {
-    SearchResultsDomManager.renderSearchResults(searchResults)
+    restaurantsResultsDomManager.renderSearchResults(searchResults)
 });
-restaurantsResultsDomManager.renderSearchResults(searchResults)
+// restaurantsResultsDomManager.renderSearchResults(searchResults)
