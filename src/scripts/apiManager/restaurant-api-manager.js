@@ -16,7 +16,7 @@ const apiManagerRestaurant = {
 //const searchResultPromiseRestaurant = apiManagerRestaurant.searchRestaurants
 //(searchCriteriaRestaurant);
 
-//  searchResultPromise.then(searchResults => {
+//  searchResultPromisePromise.then(searchResults => {
 // console.log(searchResults);
 // });
 
