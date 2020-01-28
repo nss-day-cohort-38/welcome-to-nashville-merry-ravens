@@ -1,4 +1,4 @@
-const apiBaseUrl = `https://developers.zomato.com/api/v2.1/search?entity_id=1138&`
+const retaurantsApiBaseUrl = `https://developers.zomato.com/api/v2.1/search?entity_id=1138&`
 
 const searchCriteriaRestaurant =  "Chinese"
 
@@ -8,7 +8,7 @@ const searchCriteriaRestaurant =  "Chinese"
 
 const apiManagerRestaurant = {
   searchRestaurants(searchCriteriaRestaurant) {
-    const url = apiBaseUrl + `q=${searchCriteriaRestaurant}` + `&apikey=${apiKeys.Zomato}`
+    const url = restaurantsApiBaseUrl + `q=${searchCriteriaRestaurant}` + `&apikey=${apiKeys.Zomato}`
     return fetch(url).then(resp => resp.json());
   }
 };
