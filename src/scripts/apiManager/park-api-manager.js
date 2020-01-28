@@ -1,4 +1,4 @@
-const apiBaseUrl = `https://data.nashville.gov/resource/74d7-b74t.json?`
+const parksApiBaseUrl = `https://data.nashville.gov/resource/74d7-b74t.json?`
 
 // TODO: Integrate into Event & DOM Managers
 const parkSearchCriteria =  "Metro"
@@ -6,7 +6,7 @@ const parkSearchCriteria =  "Metro"
 //Searches Restaurants 
 const parksApiManager = {
   searchParks(searchCriteria) {
-    const url = apiBaseUrl + `$q=${searchCriteria}`
+    const url = parksApiBaseUrl + `$q=${searchCriteria}`
     return fetch(url).then(resp => resp.json());
   }
 };
