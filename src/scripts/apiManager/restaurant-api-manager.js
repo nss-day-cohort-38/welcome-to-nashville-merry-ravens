@@ -8,7 +8,7 @@ const searchCriteriaRestaurant =  "Chinese"
 
 const apiManagerRestaurant = {
   searchRestaurants(searchCriteriaRestaurant) {
-    const url = parksApiBaseUrl + `q=${searchCriteriaRestaurant}` + `&apikey=${apiKeys.Zomato}`
+    const url = restaurantsApiBaseUrl + `q=${searchCriteriaRestaurant}` + `&apikey=${apiKeys.Zomato}`
     return fetch(url).then(resp => resp.json());
   }
 };
