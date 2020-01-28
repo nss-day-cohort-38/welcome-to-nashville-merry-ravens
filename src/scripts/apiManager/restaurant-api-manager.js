@@ -13,7 +13,8 @@ const apiManagerRestaurant = {
   }
 };
 
-const searchResultPromiseRestaurant = apiManagerRestaurant.searchRestaurants(searchCriteriaRestaurant);
+//const searchResultPromiseRestaurant = apiManagerRestaurant.searchRestaurants
+//(searchCriteriaRestaurant);
 
 //  searchResultPromise.then(searchResults => {
 // console.log(searchResults);
