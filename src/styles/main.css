@@ -1,5 +1,34 @@
+<<<<<<< HEAD
 #searchContainer {
     border: 2px solid silver;
     padding: 8px;
     
 }
+=======
+/* Art CSS */
+.artGeneral {
+    display: flex;
+    flex-direction: column;
+    /* border-bottom: dotted 2px black; */
+    padding: 0px;
+    margin: 0px;
+    
+}
+.artsubTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.artGeneral div {
+    border: solid 1.5px black;
+    border-radius: 10px;
+
+}
+
+.artDescription {
+    display: flex;
+    margin: 5px;
+}
+
+/* Art Css */
+>>>>>>> master
