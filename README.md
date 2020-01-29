@@ -1,5 +1,5 @@
 # Welcome to Nashville: an Itinerary for a day trip to Music City
-a group project by:
+A group project by:
 - [Matt Reeds](https://github.com/MReeds)
 - [Sofia Candiani](https://github.com/sncandiani)
 - [Roxanne Nasraty](https://github.com/rsnasraty)
@@ -10,6 +10,8 @@ In this app users can search for four different things to do/visit in Nashville:
 * public art collections -- using Nashville [Metro Gov API](https://dev.socrata.com/foundry/data.nashville.gov/eviu-nxp6)
 * restaurants -- using the [Zomato API](https://developers.zomato.com/api)
 * concerts -- using the [Ticketmaster API](https://developer.ticketmaster.com/products-and-docs/apis/getting-started/)
+
+When the user searches for any of the four categories of things to do, the results are listed in the DOM. Each result item has a button to add the item to the current itinerary.
 
 
 ## Build Instructions
@@ -22,7 +24,7 @@ In the browser window that opens:
 1. In the results printed to the DOM, clicking on the "Save" button for a single result will save it to the Itinerary
 
 
-## SKills Utilized
+## Skills Utilized
 
 We utilized all skills and concepts learned up to this point in our time here at NSS:
 
@@ -35,8 +37,4 @@ We utilized all skills and concepts learned up to this point in our time here at
 1. Modular code
 1. Semantic HTML
 1. [Valid HTML5](https://validator.w3.org/)
-
-## Itinerary Builder
-
-When the user searches for any of the four categories of things to do, the results are listed in the DOM. Each result item has a button to add the item to the current itinerary.
 
