@@ -3,43 +3,16 @@
     padding: 8px;
     
 }
-/* Art CSS */
-.artGeneral {
-    display: flex;
-    flex-direction: column;
-    /* border-bottom: dotted 2px black; */
-    padding: 10px;
-    margin: 0px;
-    
-}
-.artsubTitle {
-    display: flex;
-    justify-content: center;
-}
 
-.artGeneral div {
-    border: solid 1.5px black;
-    border-radius: 10px;
-
-}
-
-.artDescription {
-    display: flex;
-    margin: 5px;
-}
-
-.art-save {
-    margin: 10px;
-}
-
-
-
-/* Art Css */
-
-/* restaurant CSS */
-section.restaurant {
+section{
     display: flex;
     flex-direction: column;
     padding: 5px;
     margin: 10px;
+    border: solid 1.5px black;
+    border-radius: 10px;
 };
+
+section button {
+    width: 50px;
+}
