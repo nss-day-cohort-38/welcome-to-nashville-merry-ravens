@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     /* border-bottom: dotted 2px black; */
-    padding: 0px;
+    padding: 10px;
     margin: 0px;
     
 }
@@ -28,26 +28,18 @@
     margin: 5px;
 }
 
+.art-save {
+    margin: 10px;
+}
+
+
+
 /* Art Css */
 
 /* restaurant CSS */
-
-.restaurant {
+section.restaurant {
     display: flex;
     flex-direction: column;
     padding: 5px;
     margin: 10px;
 };
-.restaurant-name {
-    display: flex;
-    justify-content: center;
-}
-.restaurant-location {
-    display: flex;
-    justify-content: center;
-}
-.restaurant {
-    border: solid 1.5px black;
-    border-radius: 10px;
-    padding: 10px;
-}
