@@ -47,7 +47,7 @@
                 const buttonId = e.target.id;
                 // console.log(`${buttonId} was clicked`);
                 const sectionId = buttonId.split("-")[2]; // This grabs the concertId from the button
-                 console.log("SectionId =", sectionId); 
+                  
                 this.saveItinerary(sectionId);
             })
         })
