@@ -17,25 +17,21 @@ const concertSearchResultsDomManager = {
     },
     renderSearchResults(searchResults) {
         const concerts = searchResults._embedded.events
-        // Uncomment this to get a log of the fetch result:
         const container = document.querySelector("#resultsContainer");
         container.innerHTML = "<h2>Concert Results</h2>";
         concerts.forEach(concert => {
           container.innerHTML += this.concertFactory(concert)
-          // Added this
+          // For here on down was added for the itinerary
           this.listenerSaveItinerary(`save--${concert_id}`);
-          ;
         });
 
     },
     listenerSaveItinerary(buttonId){
         const button = document.getElementById(buttonId);
         button.addEventListener("click", () => {
-            //Take the Article tied to buttonID
             const sectionId = buttonId.split("-")[2]; // This grabs the concertId from the button
             console.log(sectionId); 
             this.saveItinerary(sectionId);
-            //Pass it to an Itinerary Dom Output thing
             
         })
     },
@@ -46,34 +42,4 @@ const concertSearchResultsDomManager = {
         console.log(section);
         container.innerHTML = `<h3>Favorite Restaurant:</h2>` + section.innerHTML;
     }
-
-
 }
-
-
-// Half-finished code to save:
-// This should go on the event listener...
-// const saveCard = (event) => {
-//     const id = event.target.id.split("-")[2];
-//     const card = document.getElementById(`card--${id}`)
-//     outputContainer.removeChild(card)
-// }
-
-// Abandoned method
-// concert_id ++;
-// const entryField = document.getElementById("search-concerts");
-// const outputContainer = document.getElementById("itineraryContainer");
-// const card = document.createElement("article");
-// // card.classList.add("border");
-// card.id = `card--${concert_id}`;
-// // Change this
-// card.textContent = searchCriteria;
-
-// const saveButton = document.createElement("BUTTON")
-// saveButton.innerHTML = "SAVE";
-// saveButton.id = `save--${concert_id}`;
-// saveButton.classList.add("saveButton");
-// saveButton.addEventListener("click", saveCard);
-// card.appendChild(saveButton);
-
-// outputContainer.appendChild(card);
