@@ -41,5 +41,6 @@ const restaurantsResultsDomManager = {
         container.innerHTML = `Restaurant: ` + section.innerHTML;
     }
 }
+// comment
 
 
