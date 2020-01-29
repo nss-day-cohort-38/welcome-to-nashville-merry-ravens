@@ -20,7 +20,7 @@ const concertSearchResultsDomManager = {
         const container = document.querySelector("#resultsContainer");
         container.innerHTML = "<h2>Concert Results</h2>";
         concerts.forEach(concert => {
-          container.innerHTML += this.concertFactory(concert)
+        container.innerHTML += this.concertFactory(concert)
           // For here on down was added for the itinerary
         });
         this.addSaveEventListener();

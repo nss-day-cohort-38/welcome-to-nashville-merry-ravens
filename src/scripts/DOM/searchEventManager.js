@@ -28,7 +28,7 @@ const searchParkEventManager = {
                     const searchArtResultPromise = artApiManager.searchArtLocations(searchCriteria);
                     searchArtResultPromise.then(searchResults => {
                         // console.log(searchResults) /*this is a place holder to later be passed to DOM manager*/
-                        console.log(searchResults) /*this is a place holder to later be passed to DOM manager*/
+                        // console.log(searchResults) /*this is a place holder to later be passed to DOM manager*/
                         artSearchResultsDomManager.renderSearchResults(searchResults)
                     
                 })
