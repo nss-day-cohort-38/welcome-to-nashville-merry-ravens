@@ -11,23 +11,19 @@
     <h1>Welcome To Nashville</h1>
     <h2>Search for stuff to do today</h2>
     <div id="searchContainer">
-        <input type="text" id="search-parks" placeholder="Parks by feature" />
+        <input type="text" id="search-parks" placeholder="Search for parks" />
         <button class="searchBtn" id="search-parks-btn">Search</button>
         <div>
-        <input type="text" id="search-art" placeholder="Public art by description" />
+        <input type="text" id="search-art" placeholder="Search for public art" />
         <button class="searchBtn" id="search-art-btn">Search</button>
         </div>
-        <input type="text" id="search-restaurants" placeholder="Restaurants by ethnicity" />
+        <input type="text" id="search-restaurants" placeholder="Search for restaurants" />
         <button class="searchBtn" id="search-restaurants-btn">Search</button>
         <div>
-        <input type="text" id="search-concerts" placeholder="Concerts by genre" />
+        <input type="text" id="search-concerts" placeholder="Search for concerts" />
         <button class="searchBtn" id="search-concerts-btn">Search</button>
         </div>
     </div>
-
-    <article id="resultsContainer">
-        
-    </article>
     <div id="itineraryContainer">
         <h2>My Itinerary</h2>
         <article id=parksItineraryContainer></article>
@@ -35,6 +31,10 @@
         <article id=restaurantsItineraryContainer></article>
         <article id=concertsItineraryContainer></article>
     </div>
+
+    <article id="resultsContainer">
+        
+    </article>
 
     <script src="scripts/apiManager/api-keys.js"></script>
     <script src="scripts/apiManager/art-api-manager.js"></script>
