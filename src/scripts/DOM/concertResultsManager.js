@@ -27,12 +27,12 @@ const concertSearchResultsDomManager = {
     },
     addSaveEventListener(){
         const buttons = document.querySelectorAll(".concert-save")
-        console.log(buttons)
+        // console.log(buttons)
         // const button = document.getElementById(buttonId);
         buttons.forEach(button =>{
             button.addEventListener("click", (e) => {
                 const buttonId = e.target.id;
-                console.log(`${buttonId} was clicked`);
+                // console.log(`${buttonId} was clicked`);
                 const sectionId = buttonId.split("-")[4]; // This grabs the concertId from the button
                 // console.log("SectionId =", sectionId); 
                 this.saveItinerary(sectionId);
