@@ -1,37 +1,30 @@
-/*  const parkSearchResultsDomManager = {
-    parkFactory(park) {
-    console.log("parkFactory")
-    return `
-    <section>
-    <h1>${park.park_name}</h1>
-    </section>
-    `
-    }, 
-    renderParkSearchResults(searchResults) {
-    const container = document.querySelector("#resultsContainer");
-    searchResults.forEach(park => {
-    container.innerHTML += this.parkFactory(park)
-    })
-    } 
-    }  
- */
- 
-
-
-
- 
-/* Tester to make sure information is being passed 
-
  const artSearchResultsDomManager = {
      artFactory(art) {
-         console.log(art)
+         return ` 
+         <section class="artGeneral">
+          
+         <h1 class="artsubTitle">Location</h1>
+         <p><h4 class="artLocation">${art[`location`]}</h4></p>
+         <h1 class="artsubTitle">Artist</h1>
+         <p><h4 class="artistName">${art[`first_name`]} ${art[`last_name`]}</h4></p>
+         <h1 class="artsubTitle">Artwork</h1>
+         <p><h4 class="artworkName">${art.artwork}</h4></p>
+         <h1 class="artsubTitle">Description</h1>
+         <p class="artDescription">${art.description}</p>
+
+         </section>
+         `
+     }, 
+     renderSearchResults(searchResults) {
+        const container = document.querySelector("#resultsContainer")
+        container.innerHTML = "<p>Art by Description Results</p>";
+        if(searchResults.length >= 1) {
+            searchResults.forEach(result => {
+                container.innerHTML += this.artFactory(result)
+            })
+        } else {
+            container.innerHTML += "<p>No results availalble</p>"
+        }
+
      }
- }
-
- const criteria = "12 South"
-
- const searchResultPromise = artApiManager.searchArtLocations(criteria)
- searchResultPromise.then(searchResults => {
-    artSearchResultsDomManager.artFactory(searchResults)
- })
- */
+}
