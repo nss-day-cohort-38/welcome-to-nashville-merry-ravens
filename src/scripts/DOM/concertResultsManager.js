@@ -25,10 +25,30 @@ const concertSearchResultsDomManager = {
         const container = document.querySelector("#resultsContainer");
         container.innerHTML = "<h2>Concert Results</h2>";
         concerts.forEach(concert => {
-          container.innerHTML += this.concertFactory(concert);
+          container.innerHTML += this.concertFactory(concert)
+          // Added this
+          this.listenerSaveItinerary(`save--${concert_id}`);
+          ;
         });
 
+    },
+    listenerSaveItinerary(buttonId){
+        const button = document.getElementById(buttonId);
+        button.addEventListener("click", () => {
+            //Take the Article tied to buttonID
+            const sectionId = buttonId.split("-")[2]; // This grabs the concertId from the button
+            console.log(sectionId); 
+            this.saveItinerary(sectionId);
+            //Pass it to an Itinerary Dom Output thing
+            
+        })
+    },
+    saveItinerary(sectionId){
+        const section = document.getElementById(`concert--${sectionId}`);
+        console.log(section);
+        itineraryContainer.innerHTML += section;
     }
+
 
 }
 
