@@ -5,13 +5,14 @@ const restaurantsResultsDomManager = {
         restaurant_id ++;
         return `
         <section class="restaurant" id="restaurant--${restaurant_id}>
+        <div>
             <div class="restuarant-name>${restaurant.restaurant.name}</div>
             <div class="restaurant-location">${restaurant.restaurant.location.address}
-            <div class="restaurant-cuisines">${restaurant.restaurant.cuisines}</div>
-        </section>
-        `
-    },
-    renderSearchResults(searchResults) {
+            </div>
+            </section>
+            `
+        },
+        renderSearchResults(searchResults) {
             const restaurants = searchResults.restaurants
             const container = document.querySelector("#resultsContainer");
             container.innerHTML = "<h2>Restaurant Results</h2>"
