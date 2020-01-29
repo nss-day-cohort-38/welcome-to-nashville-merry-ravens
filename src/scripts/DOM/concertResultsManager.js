@@ -44,6 +44,6 @@ const concertSearchResultsDomManager = {
         // console.log(container)
         const section = document.getElementById(`concert--${sectionId}`);
         // console.log(section);
-        container.innerHTML = `<h3>Favorite Restaurant:</h2>` + section.innerHTML;
+        container.innerHTML = `<h3>Favorite Concert:</h2>` + section.innerHTML;
     }
 }
