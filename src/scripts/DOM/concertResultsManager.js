@@ -5,7 +5,6 @@ const concertSearchResultsDomManager = {
         concert_id ++;
         return `
             <section class="concert" id="concert--${concert_id}">
-                <br>
                 <div class="concert-name">${concert.name}</div>
                 <div class="concert-date">${concert.dates.start.localDate}</div>
                 <div class="concert-time">${concert.dates.start.localTime}</div>
@@ -13,15 +12,12 @@ const concertSearchResultsDomManager = {
                 <button id="save--${concert_id}" class="concert-save">
                     Save &#11088;
                 </button>
-      
-                <br>
             </section>
         `
     },
     renderSearchResults(searchResults) {
         const concerts = searchResults._embedded.events
         // Uncomment this to get a log of the fetch result:
-        // console.log(concerts);
         const container = document.querySelector("#resultsContainer");
         container.innerHTML = "<h2>Concert Results</h2>";
         concerts.forEach(concert => {
@@ -44,7 +40,8 @@ const concertSearchResultsDomManager = {
         })
     },
     saveItinerary(sectionId){
-        const container = document.getElementById(concertsItineraryContainer);
+        const container = document.getElementById("concertsItineraryContainer");
+        console.log(container)
         const section = document.getElementById(`concert--${sectionId}`);
         console.log(section);
         container.innerHTML = `<h3>Favorite Restaurant:</h2>` + section.innerHTML;
