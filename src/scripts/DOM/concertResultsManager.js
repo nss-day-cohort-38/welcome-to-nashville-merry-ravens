@@ -13,7 +13,7 @@ const concertSearchResultsDomManager = {
                 <button id="save--${concert_id}" class="concert-save">
                     Save &#11088;
                 </button>
-      
+
                 <br>
             </section>
         `
@@ -25,7 +25,7 @@ const concertSearchResultsDomManager = {
         const container = document.querySelector("#resultsContainer");
         container.innerHTML = "<h2>Concert Results</h2>";
         concerts.forEach(concert => {
-          container.innerHTML += this.concertFactory(concert);
+        container.innerHTML += this.concertFactory(concert);
         });
 
     }
