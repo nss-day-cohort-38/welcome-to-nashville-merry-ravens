@@ -4,12 +4,13 @@ const restaurantsResultsDomManager = {
     restaurantFactory(restaurant) {
         restaurant_id ++;
         return `
-        <section class="restaurant" id="restaurant--${restaurant_id}>
+        <section class="restaurant">
         <div>
-            <div class="restuarant-name>${restaurant.restaurant.name}</div>
-            <div class="restaurant-location">${restaurant.restaurant.location.address}
-            </div>
-            </section>
+            <div class="restuarant-name" id="restaurant--${restaurant_id}">${restaurant.restaurant.name}</div>
+            <div class="restaurant-location">${restaurant.restaurant.location.address}</div>
+            <button id="restaurant-button-${restaurant_id}" class="restaurant-save">Save</button>
+        </div>
+        </section>
             `
         },
         renderSearchResults(searchResults) {
@@ -22,31 +23,24 @@ const restaurantsResultsDomManager = {
             })} else {
                 container.innerHTML += "<p>No results available</p>"
             }
-            this.listenerSaveItinerary(`save--${restaurant_id}`);
+            this.addSaveEventListener();
         },
-        
-    },
-{
-        const button = document.getElementById(buttonId);
-        button.addEventListener("click", () => {
-            const sectionId = buttonId.split("-")[2]
-            console.log(sectionId)
+        addSaveEventListener(){
+        const buttons = document.querySelectorAll(".restaurant-save")
+        buttons.forEach(button =>{
+            button.addEventListener("click", (e) => {
+                const buttonId = e.target.id;
+                const sectionId = buttonId.split("-")[2]; 
+                console.log(sectionId)
+                this.saveItinerary(sectionId);
+            })
         })
+    },
+    saveItinerary(sectionId){
+        const container = document.getElementById("restaurantsItineraryContainer");
+        const section = document.getElementById(`restaurant--${sectionId}`);
+        container.innerHTML = `Restaurant: ` + section.innerHTML;
     }
-//     listenerSaveItinerary(buttonId){
-//         const button = document.getElementById(buttonId);
-//         button.addEventListener("click", () => {
-//             const sectionId = buttonId.split("-")[2]; // This grabs the concertId from the button
-//             // console.log(sectionId); 
-//             this.saveItinerary(sectionId);
-            
-//         })
-//     },
-//     saveItinerary(sectionId){
-//         const container = document.getElementById("concertsItineraryContainer");
-//         // console.log(container)
-//         const section = document.getElementById(`concert--${sectionId}`);
-//         // console.log(section);
-//         container.innerHTML = `<h3>Favorite Restaurant:</h2>` + section.innerHTML;
-//     }
-// }
+}
+
+

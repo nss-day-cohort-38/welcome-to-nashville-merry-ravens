@@ -31,8 +31,11 @@
 /* Art Css */
 
 /* restaurant CSS */
+#resultsContainer {
+    border: solid 1.5px black;
+};
 
-.restaurant {
+section.restaurant {
     display: flex;
     flex-direction: column;
     padding: 5px;
@@ -41,13 +44,17 @@
 .restaurant-name {
     display: flex;
     justify-content: center;
-}
+};
 .restaurant-location {
     display: flex;
     justify-content: center;
-}
+};
 .restaurant {
     border: solid 1.5px black;
     border-radius: 10px;
     padding: 10px;
+};
+#restaurant-button {
+    display: flex;
+    justify-content: center;
 }
