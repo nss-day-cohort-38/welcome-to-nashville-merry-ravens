@@ -17,12 +17,16 @@ const concertSearchResultsDomManager = {
         `
     },
     renderSearchResults(searchResults) {
-        const concerts = searchResults._embedded.events
         const container = document.querySelector("#resultsContainer");
         container.innerHTML = "<h2>Concert Results</h2>";
-        concerts.forEach(concert => {
-          container.innerHTML += this.concertFactory(concert)
-        });
+        if (searchResults.hasOwnProperty('_embedded')) {
+            const concerts = searchResults._embedded.events
+            concerts.forEach(concert => {
+                container.innerHTML += this.concertFactory(concert);
+            })
+        } else {
+            container.innerHTML += "<p>No results available</p>"
+        }
         this.addSaveEventListener();
     },
     addSaveEventListener(){
