@@ -30,16 +30,16 @@ const concertSearchResultsDomManager = {
         const button = document.getElementById(buttonId);
         button.addEventListener("click", () => {
             const sectionId = buttonId.split("-")[2]; // This grabs the concertId from the button
-            console.log(sectionId); 
+            // console.log(sectionId); 
             this.saveItinerary(sectionId);
             
         })
     },
     saveItinerary(sectionId){
         const container = document.getElementById("concertsItineraryContainer");
-        console.log(container)
+        // console.log(container)
         const section = document.getElementById(`concert--${sectionId}`);
-        console.log(section);
+        // console.log(section);
         container.innerHTML = `<h3>Favorite Restaurant:</h2>` + section.innerHTML;
     }
 }
