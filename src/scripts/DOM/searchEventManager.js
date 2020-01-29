@@ -10,7 +10,6 @@ const searchParkEventManager = {
             input.value = "";
             const searchParkResultPromise = parksApiManager.searchParks(searchCriteria);
                     searchParkResultPromise.then(searchResults => {
-                        // console.log(searchResults) /*this is a place holder to later be passed to DOM manager*/
             })
         })
     }
@@ -29,8 +28,6 @@ const searchParkEventManager = {
                     input.value = "";
                     const searchArtResultPromise = artApiManager.searchArtLocations(searchCriteria);
                     searchArtResultPromise.then(searchResults => {
-                        // console.log(searchResults) /*this is a place holder to later be passed to DOM manager*/
-                        console.log(searchResults) /*this is a place holder to later be passed to DOM manager*/
                         artSearchResultsDomManager.renderSearchResults(searchResults)
                     
                 })
@@ -51,8 +48,6 @@ const searchParkEventManager = {
                     const searchRestaurantsResultPromise = apiManagerRestaurant.searchRestaurants(searchCriteria);
                     searchRestaurantsResultPromise.then(searchResults => {
                         restaurantsResultsDomManager.renderSearchResults(searchResults);
-                        // console.log(searchResults) /*this is a place holder to later be passed to DOM manager*/
-                    
                 })
             })
         }}
