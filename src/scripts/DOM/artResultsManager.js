@@ -2,22 +2,27 @@
      artFactory(art) {
          return ` 
          <section class="artGeneral">
-          
-         <h1 class="artsubTitle">Location</h1>
-         <p><h4 class="artLocation">${art[`location`]}</h4></p>
-         <h1 class="artsubTitle">Artist</h1>
-         <p><h4 class="artistName">${art[`first_name`]} ${art[`last_name`]}</h4></p>
-         <h1 class="artsubTitle">Artwork</h1>
-         <p><h4 class="artworkName">${art.artwork}</h4></p>
+          <div>
+         <h1 class="artsubTitle">Location: ${art[`location`]}</h1>
+         
+         <h1 class="artsubTitle">Artist Name: ${art[`first_name`]} ${art[`last_name`]}</h1>
+         
+
+        
+         <h1 class="artsubTitle">Artwork: ${art.artwork}</h1>
+
+        
          <h1 class="artsubTitle">Description</h1>
          <p class="artDescription">${art.description}</p>
+
+         </div>
 
          </section>
          `
      }, 
      renderSearchResults(searchResults) {
         const container = document.querySelector("#resultsContainer")
-        container.innerHTML = "<p>Art by Description Results</p>";
+        container.innerHTML = "<h1>Art by Description Results</h1>";
         if(searchResults.length >= 1) {
             searchResults.forEach(result => {
                 container.innerHTML += this.artFactory(result)
