@@ -44,9 +44,10 @@ const concertSearchResultsDomManager = {
         })
     },
     saveItinerary(sectionId){
+        const container = document.getElementById(concertsItineraryContainer);
         const section = document.getElementById(`concert--${sectionId}`);
         console.log(section);
-        itineraryContainer.innerHTML += section;
+        container.innerHTML = `<h3>Favorite Restaurant:</h2>` + section.innerHTML;
     }
 
 
