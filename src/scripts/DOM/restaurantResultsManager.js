@@ -31,7 +31,6 @@ const restaurantsResultsDomManager = {
             button.addEventListener("click", (e) => {
                 const buttonId = e.target.id;
                 const sectionId = buttonId.split("-")[2]; 
-                console.log(sectionId)
                 this.saveItinerary(sectionId);
             })
         })
