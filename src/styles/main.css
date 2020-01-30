@@ -11,8 +11,9 @@ section{
     margin: 10px;
     border: solid 1.5px black;
     border-radius: 10px;
+    
 };
 
-section button {
-    width: 50px;
+.art-general button { 
+    background-color: blue;
 }

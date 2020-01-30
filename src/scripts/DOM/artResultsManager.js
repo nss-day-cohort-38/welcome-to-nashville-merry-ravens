@@ -11,10 +11,8 @@
          <h1 class="artsubTitle" id="art--${art_id}">Artwork: ${art.artwork}</h1>
          <h1 class="artsubTitle">Description</h1>
          <p class="artDescription">${art.description}</p>
+         <button id="save--${art_id}" class="art-save">Save</button>
          </div>
-         <button id="save--${art_id}" class="art-save">
-         Save &#11088;
-         </button>
          </section>
          `
      }, 

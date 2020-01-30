@@ -5,14 +5,16 @@ const concertSearchResultsDomManager = {
         concert_id ++;
         return `
             <section class="concert">
+            <div>
                 <div class="concert-name" id="concert--${concert_id}">
                     ${concert.name} <a href="${concert.url}">[Link]</a>
                 </div>
                 <div class="concert-date">${concert.dates.start.localDate}</div>
                 <div class="concert-time">${concert.dates.start.localTime}</div>
                 <button id="save--concert--${concert_id}" class="concert-save">
-                    Save &#11088;
+                    Save
                 </button>
+            </div>
             </section>
         `
     },
