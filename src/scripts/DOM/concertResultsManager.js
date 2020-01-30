@@ -37,7 +37,8 @@ const concertSearchResultsDomManager = {
             button.addEventListener("click", (e) => {
                 const buttonId = e.target.id;
                 const sectionId = buttonId.split("-")[4]; // This grabs the concertId from the button
-                this.saveItinerary(sectionId);
+                this.saveItinerary(sectionId); // to delete when JSON db is working
+                apiConcertManager.saveConcert(sectionId);
             })
         })
     },
