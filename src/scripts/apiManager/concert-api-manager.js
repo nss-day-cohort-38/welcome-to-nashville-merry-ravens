@@ -31,21 +31,3 @@
         }
     }; 
     // console.log(apiConcertManager.searchConcerts("top"))
-
-// RAW CODE FROM POSTMAN
-// var myHeaders = new Headers();
-// myHeaders.append("Content-Type", "application/json");
-
-// var raw = JSON.stringify({"park":"New Fangled Park"});
-
-// var requestOptions = {
-//   method: 'PATCH',
-//   headers: myHeaders,
-//   body: raw,
-//   redirect: 'follow'
-// };
-
-// fetch("http://localhost:8088/itinerary/?id=1", requestOptions)
-//   .then(response => response.text())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error));
